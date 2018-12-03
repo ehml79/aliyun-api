@@ -1,7 +1,7 @@
+#!/usr/bin/env python
 # coding:utf-8
 # 添加阿里云解析
 
-# python2
 
 import os
 import sys
