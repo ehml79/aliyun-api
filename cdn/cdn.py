@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # -*- coding:utf-8 -*-
 
 import sys,os
@@ -67,13 +67,6 @@ def compose_url(user_params):
 def make_request(user_params, quiet=False):
     url = compose_url(user_params)
     print url
-    
-    # 执行请求
-    response = urllib2.urlopen(url)
-    print response.read()
-    return response.read()
-
-
 def configure_accesskeypair(args, options):
     if options.accesskeyid is None or options.accesskeysecret is None:
         print("config miss parameters, use --id=[accesskeyid] --secret=[accesskeysecret]")
