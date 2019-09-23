@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+# python2
 
 import sys,os
 import urllib, urllib2
@@ -118,7 +119,7 @@ if __name__ == '__main__':
     if not sys.argv[1].lower().startswith('action='):
         user_params['action'] = sys.argv[1]
         idx = 2
-
+    # python cdn.py Action=RefreshObjectCaches ObjectType=File ObjectPath=http://yourdomain/1.txt
     for arg in sys.argv[idx:]:
         try:
             key, value = arg.split('=')
