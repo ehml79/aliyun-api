@@ -107,8 +107,6 @@ if __name__ == "__main__":
     AccessKeySecret = 'your_aks'
     Version = '2017-12-14'
 
-    # 添加解析
-    # 修改DomainName 的值
     Action = 'QueryAccountBalance'
     user_param = {}
     get_regions(server_url, Action, user_param, AccessKeySecret, AccessKeyId, Version)
