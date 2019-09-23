@@ -69,10 +69,7 @@ def get_StringToSign(parameters, param_str):
 
 def get_signature(StringToSign, AccessKeySecret):
     '''构建签名'''
-
-    AccessKeySecret = AccessKeySecret.encode()
-    StringToSign = StringToSign.encode()
-    h = hmac.new(AccessKeySecret, StringToSign, hashlib.sha1)
+    h = hmac.new(AccessKeySecret.encode(), StringToSign.encode(), hashlib.sha1)
     signature = base64.b64encode(h.digest()).strip()
     return signature
 
