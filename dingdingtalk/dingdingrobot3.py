@@ -8,7 +8,7 @@ import urllib.parse
 import requests
 import json
 
-secret = 'SEC1872db19826828bfaabbed2dbce6982e9e10ed983645a8cb18ce996d912b63ca'
+secret = 'your_secret'
 timestamp = round(time.time() * 1000)
 secret_enc = bytes(secret, 'utf-8')
 string_to_sign = '{}\n{}'.format(timestamp, secret)
@@ -33,7 +33,7 @@ def send_msg(url):
 
 
 if __name__ == '__main__':
-    url = 'https://oapi.dingtalk.com/robot/send?access_token=2119679476e921a5025195258ecd064825ac5fb032e18d90a3ef20036dc02d10' + '&timestamp=' + str(timestamp) + '&sign=' + sign
-
+    url = 'https://oapi.dingtalk.com/robot/send?access_token=your_access_token' \
+    + '&timestamp=' + str(timestamp) + '&sign=' + sign
     #print(url)
     print(send_msg(url))
